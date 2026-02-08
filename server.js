@@ -16,7 +16,7 @@ const \{\
   NEO4J_URI,\
   NEO4J_USER,\
   NEO4J_PASSWORD,\
-  PORT = 3000,\
+  PORT = 10000,\
 \} = process.env;\
 \
 const driver = neo4j.driver(\
