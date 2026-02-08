@@ -49,4 +49,7 @@ app.post("/run", async (req, res) => {
   }
 });
 
+console.log("BODY RECEBIDO:", req.body);
+
+
 app.listen(PORT, () => console.log("Neo4j middleware running"));
