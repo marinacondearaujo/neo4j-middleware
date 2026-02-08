@@ -27,6 +27,7 @@ app.get("/health", async (_, res) => {
 });
 
 app.post("/run", async (req, res) => {
+  console.log("BODY RECEBIDO:", req.body);
   if (req.header("X-API-KEY") !== API_KEY) {
     return res.status(401).json({ error: "unauthorized" });
   }
@@ -48,8 +49,6 @@ app.post("/run", async (req, res) => {
     await session.close();
   }
 });
-
-console.log("BODY RECEBIDO:", req.body);
 
 
 app.listen(PORT, () => console.log("Neo4j middleware running"));
